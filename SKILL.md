@@ -82,4 +82,45 @@ If an `achievements.md` file exists in the current directory, update it:
 - Count `notes/daily-log-*.md` files to update streak and check achievement unlocks (First Log, Consistency, Week Warrior, Fortnight Force).
 - Add an entry to the Activity Log table.
 
+## Auto-Enrich: Pattern Analysis (every 3rd log)
+
+After saving, count all `notes/daily-log-*.md` files. If the count is divisible by 3 (3, 6, 9, 12...):
+
+1. Read ALL daily-log files in `notes/`
+2. Read `user-profile.md` (if it exists)
+3. Analyze patterns across all logs:
+   - Energy/focus/mood trends (which days are high/low?)
+   - Recurring blockers (what themes keep appearing?)
+   - Correlations (does high energy correlate with certain activities?)
+   - Productivity windows (any time-of-week patterns?)
+4. Add or update a `## Patterns From Daily Logs` section at the end of `user-profile.md`
+5. Keep it concise — 5-8 bullet points max. Replace the previous version, don't append.
+6. Tell the user: "Updated user-profile.md with patterns from X logs."
+
+Example patterns section:
+```markdown
+## Patterns From Daily Logs
+*Auto-updated from 9 daily logs*
+- Energy peaks mid-week (Tue-Thu avg 8, Mon avg 5)
+- Most common blocker: context-switching between projects
+- Focus improves on days with a clear "one thing" from previous log
+- Mood correlates strongly with getting the highlight task done
+- Best productivity window: mornings before first meeting
+```
+
+## Optional: Group Share
+
+After everything is saved, ask ONE final question:
+
+- **Question:** "Share something with the course group?"
+- **Options:** `["Share streak + vibe (e.g. 'Day 5. Energy 8.')", "Write a custom message", "Skip — keep it private"]`
+
+If they choose to share:
+1. Compose a short one-liner (streak count + vitals, or their custom text)
+2. Show the exact message and ask for confirmation before doing anything
+3. If confirmed, send it to the course Telegram group **"edu-ai-productivity-s2"** via MCP
+4. If MCP is not connected or sending fails, just print the message and say "Copy this to the group chat when you're ready"
+
+If they skip, move on silently.
+
 Do NOT turn this into a long conversation. The whole interaction should take under 5 minutes.
