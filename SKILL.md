@@ -117,9 +117,10 @@ After everything is saved, ask ONE final question:
 
 If they choose to share:
 1. Compose a short one-liner (streak count + vitals, or their custom text)
-2. Show the exact message and ask for confirmation before doing anything
-3. If confirmed, send it to the course Telegram group **"edu-ai-productivity-s2"** via MCP
-4. If MCP is not connected or sending fails, just print the message and say "Copy this to the group chat when you're ready"
+2. Show the exact message to the user
+3. Save it as a **draft** in the course Telegram group **"edu-ai-productivity-s2"** using `save_draft` via MCP (do NOT send — draft only)
+4. Tell them: "Draft saved to the group chat. Open it in Telegram to review and send."
+5. If MCP is not connected or drafting fails, just print the message and say "Copy this to the group chat when you're ready"
 
 If they skip, move on silently.
 
